@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Riset Informatika</string>
+    <string name="say_hi">Hi Doctor 👋</string>
+    <string name="greetings">Have a nice day!</string>
+    <string name="persuasive">Let\'s check the patient\nchest x-ray photo</string>
+    <string name="doctor_and_patient">Doctor and Patient</string>
+    <string name="diagnosis">Diagnosis</string>
+    <string name="diagnosis_now">Diagnosis Now</string>
+    <string name="patients">Patients</string>
+    <string name="see_all">See all</string>
+    <string name="patient">Patient</string>
+    <string name="dummy_patient_name">Jimmy Neutron</string>
+    <string name="dummy_diagnostic_result">Patient is affected with Pneumonia</string>
+    <string name="arrow_back">Arrow Back</string>
+    <string name="chest_xray_photo">Chest X-Ray Photo</string>
+    <string name="uploaded_image">Uploaded Image</string>
+    <string name="gallery">Gallery</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="enter_patient_name">Enter the patient name</string>
+    <string name="predict">Predict</string>
+    <string name="please_wait">Please Wait…</string>
+    <string name="all">All</string>
+    <string name="safe">Safe</string>
+    <string name="pneumonia">Pneumonia</string>
+</resources>

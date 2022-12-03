@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/tv_say_hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/oswald_regular"
+        android:letterSpacing="0.02"
+        android:text="@string/say_hi"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/oswald_regular"
+        android:letterSpacing="0.02"
+        android:text="@string/greetings"
+        android:textColor="@color/dark_green"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_say_hi"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_menu"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="@color/dark_green"
+        app:layout_constraintTop_toBottomOf="@id/tv_greetings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_persuasive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="32dp"
+                android:fontFamily="@font/oswald_regular"
+                android:letterSpacing="0.02"
+                android:text="@string/persuasive"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_diagnosis"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="32dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/worksans_regular"
+                android:letterSpacing="0.02"
+                android:text="@string/diagnosis_now"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_green"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_persuasive"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cornerRadius="30dp"/>
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="145dp"
+                android:layout_marginEnd="-16dp"
+                android:layout_marginBottom="-4dp"
+                android:contentDescription="@string/doctor_and_patient"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_doctor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/oswald_regular"
+        android:letterSpacing="0.02"
+        android:text="@string/patients"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/card_menu"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/oswald_regular"
+        android:letterSpacing="0.02"
+        android:text="@string/see_all"
+        android:textColor="@color/light_green"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/card_menu"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_patient"
+        android:layout_width="match_parent"
+        android:layout_height="289dp"
+        android:paddingVertical="8dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/tv_patient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_patient"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
